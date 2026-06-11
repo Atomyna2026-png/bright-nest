@@ -3,497 +3,336 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BrightNest Clean Services — Professional cleaning in Los Angeles</title>
-<meta name="description" content="Vetted, background-checked cleaners and plant-based products serving Los Angeles & surrounding areas. Book a spotless clean, backed by a 100% re-clean guarantee.">
+<title>BrightNest Clean Services — Los Angeles</title>
+<meta name="description" content="Premium home & office cleaning in Los Angeles and surrounding areas. Vetted, insured cleaners and a 100% re-clean guarantee.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --canvas:#FFFFFF;
-    --paper:#F7F9FB;
-    --ink:#0B1220;
-    --slate:#5B6678;
-    --line:#E6EAF0;
-    --line-strong:#D3DAE4;
-    --brand:#04B07B;
-    --brand-deep:#03805A;
-    --brand-tint:#E6F7F0;
-    --ring:rgba(4,176,123,.20);
-    --shadow:0 1px 2px rgba(11,18,32,.04), 0 12px 28px -16px rgba(11,18,32,.22);
-    --shadow-sharp:0 18px 40px -22px rgba(11,18,32,.45);
+    --bg:#0B0A0C;
+    --bg2:#141117;
+    --panel:#17141B;
+    --ink:#F4F0E8;
+    --muted:#9D968A;
+    --gold:#CBA85B;
+    --gold-bright:#E7CE8E;
+    --gold-deep:#8E7333;
+    --line:rgba(203,168,91,.22);
+    --line-soft:rgba(244,240,232,.08);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html,body{height:100%}
   body{
     font-family:'Inter',system-ui,sans-serif;
-    background:var(--canvas);color:var(--ink);line-height:1.6;
+    background:var(--bg);color:var(--ink);
+    height:100dvh;overflow:hidden;display:flex;flex-direction:column;
     -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(120% 80% at 80% -10%, rgba(203,168,91,.10), transparent 60%),
+                     radial-gradient(90% 70% at -10% 110%, rgba(203,168,91,.06), transparent 55%);
   }
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
-  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.02em}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.04}
   a{color:inherit;text-decoration:none}
-  .eyebrow{
-    font-family:'Space Grotesk',sans-serif;font-size:.78rem;font-weight:600;
-    letter-spacing:.16em;text-transform:uppercase;color:var(--brand-deep);
-  }
+  .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+  .gold{color:var(--gold)}
 
   /* buttons */
-  .btn{
-    display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Grotesk',sans-serif;
-    font-weight:600;font-size:.95rem;padding:.8rem 1.4rem;border-radius:8px;
-    border:1px solid transparent;cursor:pointer;transition:all .16s ease;white-space:nowrap;
-  }
-  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px -10px rgba(4,176,123,.7)}
-  .btn-primary:hover{background:var(--brand-deep);transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(3,128,90,.7)}
-  .btn-outline{background:var(--canvas);color:var(--ink);border-color:var(--line-strong)}
-  .btn-outline:hover{border-color:var(--ink);transform:translateY(-1px)}
-  .btn-lg{padding:.95rem 1.7rem;font-size:1rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.9rem;
+    padding:.72rem 1.4rem;border-radius:3px;border:1px solid transparent;cursor:pointer;
+    transition:all .18s ease;letter-spacing:.02em}
+  .btn-primary{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#1a1407;border-color:var(--gold-bright)}
+  .btn-primary:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 10px 26px -12px rgba(203,168,91,.6)}
+  .btn-ghost{background:transparent;color:var(--gold);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--gold);background:rgba(203,168,91,.06)}
 
-  /* utility bar */
-  .ubar{background:var(--ink);color:#fff;font-size:.82rem}
-  .ubar-inner{display:flex;align-items:center;justify-content:space-between;height:38px;font-weight:500}
-  .ubar a{color:#fff;opacity:.92;display:inline-flex;align-items:center;gap:.4rem}
-  .ubar a:hover{opacity:1}
-  .ubar .dot{color:var(--brand)}
+  /* top bar */
+  .topbar{display:flex;align-items:center;justify-content:space-between;
+    padding:18px 40px;border-bottom:1px solid var(--line-soft);flex:none}
+  .brand{display:flex;align-items:center;gap:.65rem}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .brand .name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;letter-spacing:.01em}
+  .brand .name b{color:var(--gold);font-weight:700}
+  .tabs{display:flex;align-items:center;gap:6px}
+  .tab{font-size:.86rem;font-weight:500;color:var(--muted);background:none;border:none;cursor:pointer;
+    padding:8px 14px;border-radius:3px;position:relative;letter-spacing:.03em;transition:color .16s;font-family:inherit}
+  .tab:hover{color:var(--ink)}
+  .tab.active{color:var(--gold)}
+  .tab.active::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:1.5px;background:var(--gold)}
+  .topbar .btn{flex:none}
 
-  /* nav */
-  header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
-  header.nav.scrolled{border-color:var(--line);box-shadow:0 1px 0 rgba(11,18,32,.02)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .logo{display:flex;align-items:center;gap:.6rem;font-family:'Space Grotesk',sans-serif;font-size:1.28rem;font-weight:700;letter-spacing:-.02em}
-  .logo .mark{width:32px;height:32px;flex:none}
-  .nav-links{display:flex;align-items:center;gap:2.2rem}
-  .nav-links a{font-size:.94rem;font-weight:500;color:var(--slate);transition:color .15s}
-  .nav-links a:hover{color:var(--ink)}
+  /* stage */
+  .stage{flex:1;position:relative;overflow:hidden}
+  .panel{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    padding:30px 40px;opacity:0;visibility:hidden;transform:translateY(10px);
+    transition:opacity .4s ease, transform .4s ease, visibility .4s}
+  .panel.active{opacity:1;visibility:visible;transform:none}
+  .inner{width:100%;max-width:1060px}
 
-  /* hero */
-  .hero{padding:80px 0 72px;border-bottom:1px solid var(--line)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-  .hero h1{font-size:clamp(2.6rem,5vw,4rem);margin:20px 0 0}
-  .hero h1 span{color:var(--brand)}
-  .hero .lead{font-size:1.16rem;color:var(--slate);margin:22px 0 32px;max-width:34ch}
-  .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
-  .hero-micro{display:flex;align-items:center;gap:1rem;margin-top:30px;flex-wrap:wrap;font-size:.85rem;color:var(--slate)}
-  .hero-micro span{display:inline-flex;align-items:center;gap:.45rem}
-  .hero-micro svg{flex:none}
+  /* home panel */
+  .home{text-align:center;max-width:780px}
+  .home .emblem{width:54px;height:54px;margin:0 auto 22px}
+  .home h1{font-size:clamp(3rem,7vw,5.6rem);margin:14px 0 0;letter-spacing:.005em}
+  .home h1 em{font-style:italic;color:var(--gold)}
+  .home p{color:var(--muted);font-size:1.12rem;margin:20px auto 30px;max-width:46ch;line-height:1.6}
+  .home .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-  /* hero visual (static) */
-  .hero-visual{
-    position:relative;width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;
-    border:1px solid var(--line-strong);box-shadow:var(--shadow-sharp);background:#EEF4F1;
-  }
-  .hero-visual > svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-  .hero-visual .badge{
-    position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:.5rem;
-    background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border:1px solid var(--line);
-    padding:.5rem .8rem;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:600;color:var(--ink);
-  }
-  .hero-visual .badge svg{width:16px;height:16px;color:var(--brand);flex:none}
+  /* section heading shared */
+  .phead{text-align:center;margin-bottom:34px}
+  .phead h2{font-size:clamp(2.2rem,4vw,3.1rem);margin-top:10px}
+  .phead p{color:var(--muted);margin-top:10px;font-size:1.02rem}
 
-  /* trust band */
-  .trust{background:var(--paper);border-bottom:1px solid var(--line)}
-  .trust-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-  .trust-item{padding:26px 28px;display:flex;align-items:center;gap:.7rem;border-left:1px solid var(--line);font-size:.92rem;font-weight:500}
-  .trust-item:first-child{border-left:none;padding-left:0}
-  .trust-item svg{flex:none;color:var(--brand)}
+  /* services / why grids */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:26px 24px}
+  .gcard .ico{width:42px;height:42px;border-radius:6px;border:1px solid var(--line);
+    display:grid;place-items:center;color:var(--gold);margin-bottom:16px}
+  .gcard h3{font-family:'Inter',sans-serif;font-weight:600;font-size:1.12rem;letter-spacing:-.01em}
+  .gcard p{color:var(--muted);font-size:.92rem;margin-top:8px;line-height:1.55}
 
-  /* sections */
-  section{padding:96px 0}
-  .sec-head{max-width:600px;margin-bottom:52px}
-  .sec-head h2{font-size:clamp(2rem,3.6vw,2.8rem);margin-top:14px}
-  .sec-head p{color:var(--slate);margin-top:16px;font-size:1.06rem}
+  /* process steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .pstep{text-align:center;padding:0 6px}
+  .pstep .num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--gold);line-height:1}
+  .pstep h3{font-family:'Inter',sans-serif;font-weight:600;font-size:1.08rem;margin-top:10px}
+  .pstep p{color:var(--muted);font-size:.92rem;margin-top:8px;line-height:1.55}
+  .pstep .bar{width:30px;height:1px;background:var(--line);margin:14px auto 0}
 
-  /* services */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{
-    background:var(--canvas);border:1px solid var(--line);border-radius:10px;padding:30px 28px;
-    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;position:relative;
-  }
-  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line-strong)}
-  .card .ico{width:46px;height:46px;border-radius:9px;background:var(--brand-tint);display:grid;place-items:center;color:var(--brand-deep);margin-bottom:20px}
-  .card h3{font-size:1.28rem}
-  .card p{color:var(--slate);margin-top:10px;font-size:.97rem}
-  .card .incl{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-size:.88rem;color:var(--slate)}
-  .card .incl b{color:var(--ink);font-weight:600;font-family:'Space Grotesk',sans-serif}
+  /* why list */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .why .item{padding:4px}
+  .why .pchk{width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);
+    display:grid;place-items:center;color:var(--gold);margin-bottom:14px}
+  .why h3{font-family:'Inter',sans-serif;font-weight:600;font-size:1.06rem}
+  .why p{color:var(--muted);font-size:.92rem;margin-top:7px;line-height:1.55}
 
-  /* process */
-  .process{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .step{position:relative;padding-top:8px}
-  .step .n{font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;color:var(--brand);display:inline-block;padding:.25rem .55rem;border:1px solid var(--brand);border-radius:6px;margin-bottom:18px}
-  .step h3{font-size:1.22rem}
-  .step p{color:var(--slate);margin-top:9px;font-size:.97rem}
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+  .contact-side .eyebrow{margin-bottom:8px;display:block}
+  .contact-side h2{font-size:clamp(2.2rem,4vw,3rem)}
+  .contact-side p{color:var(--muted);margin-top:14px;font-size:1rem;line-height:1.6}
+  .cinfo{margin-top:24px;display:grid;gap:12px}
+  .cinfo a{display:inline-flex;align-items:center;gap:.6rem;color:var(--ink);font-size:.95rem}
+  .cinfo a:hover{color:var(--gold)}
+  .cinfo .ci{width:34px;height:34px;border-radius:5px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold)}
+  form.q{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:24px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .f{margin-bottom:12px}
+  .f label{display:block;font-size:.74rem;letter-spacing:.04em;color:var(--muted);margin-bottom:5px;text-transform:uppercase}
+  .f input,.f select,.f textarea{width:100%;font-family:inherit;font-size:.92rem;color:var(--ink);
+    background:#100D13;border:1px solid var(--line);border-radius:4px;padding:.6rem .7rem;transition:border-color .15s,box-shadow .15s}
+  .f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(203,168,91,.16)}
+  .f textarea{resize:none;min-height:62px}
+  form.q .btn-primary{width:100%;justify-content:center;margin-top:4px}
 
-  /* standard / dark band */
-  .standard{background:var(--ink);color:#fff}
-  .standard .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-  .standard .eyebrow{color:var(--brand)}
-  .standard h2{font-size:clamp(2rem,3.4vw,2.7rem);color:#fff;margin-top:14px}
-  .standard .sub{color:rgba(255,255,255,.66);margin-top:16px;font-size:1.05rem;max-width:36ch}
-  .promise{display:grid;gap:2px}
-  .promise li{list-style:none;display:flex;gap:16px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-  .promise li:last-child{border-bottom:none}
-  .promise .pchk{flex:none;width:26px;height:26px;border-radius:7px;background:rgba(4,176,123,.16);display:grid;place-items:center;color:var(--brand);margin-top:2px}
-  .promise h4{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600}
-  .promise p{color:rgba(255,255,255,.6);font-size:.93rem;margin-top:3px}
-
-  /* quote / contact */
-  .quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
-  .quote-side h2{font-size:clamp(2rem,3.4vw,2.7rem);margin-top:14px}
-  .quote-side p{color:var(--slate);margin-top:16px;font-size:1.05rem}
-  .quote-contact{margin-top:30px;display:grid;gap:14px}
-  .quote-contact a{display:inline-flex;align-items:center;gap:.7rem;font-weight:500;color:var(--ink)}
-  .quote-contact a:hover{color:var(--brand-deep)}
-  .quote-contact .qc-ico{width:38px;height:38px;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;color:var(--brand-deep)}
-  form.quote{background:var(--canvas);border:1px solid var(--line);border-radius:12px;padding:32px;box-shadow:var(--shadow)}
-  .field{margin-bottom:18px}
-  .field label{display:block;font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:600;margin-bottom:7px}
-  .field input,.field select,.field textarea{
-    width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);background:var(--canvas);
-    border:1px solid var(--line-strong);border-radius:8px;padding:.7rem .8rem;transition:border-color .15s, box-shadow .15s;
-  }
-  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--ring)}
-  .field textarea{resize:vertical;min-height:92px}
-  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  form.quote .btn-primary{width:100%;justify-content:center;margin-top:6px}
-  .form-note{font-size:.8rem;color:var(--slate);margin-top:12px;text-align:center}
-
-  /* footer */
-  footer.site{background:var(--ink);color:#fff;padding:64px 0 36px}
-  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px}
-  .foot-grid .logo{color:#fff}
-  footer .blurb{color:rgba(255,255,255,.6);font-size:.95rem;margin-top:16px;max-width:34ch}
-  .foot-col h4{font-family:'Space Grotesk',sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:16px}
-  .foot-col a{display:block;color:rgba(255,255,255,.82);font-size:.95rem;padding:5px 0;transition:color .15s}
-  .foot-col a:hover{color:var(--brand)}
-  .foot-base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:.84rem;color:rgba(255,255,255,.5)}
-
-  /* reveal-on-scroll */
-  .fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
-  .fade.in{opacity:1;transform:none}
+  /* bottom strip */
+  .botbar{display:flex;align-items:center;justify-content:space-between;
+    padding:12px 40px;border-top:1px solid var(--line-soft);font-size:.78rem;color:var(--muted);flex:none}
+  .botbar .gold{color:var(--gold)}
 
   /* responsive */
-  @media(max-width:900px){
-    .hero-grid,.standard .wrap,.quote-grid,.foot-grid{grid-template-columns:1fr;gap:40px}
-    .cards,.steps,.trust-inner{grid-template-columns:1fr}
-    .trust-item{border-left:none;border-top:1px solid var(--line);padding-left:0}
-    .trust-item:first-child{border-top:none}
-    .nav-links,.ubar{display:none}
-    .hero .lead{max-width:none}
-    section{padding:64px 0}
-  }
-  @media(max-width:540px){
-    .field-row{grid-template-columns:1fr}
-    .wrap{padding:0 20px}
+  @media(max-width:860px){
+    .topbar{flex-wrap:wrap;gap:10px;padding:14px 20px}
+    .tabs{order:3;width:100%;justify-content:center;flex-wrap:wrap}
+    .grid3,.steps,.why,.contact-grid,.frow{grid-template-columns:1fr}
+    .stage{overflow-y:auto}
+    .panel{position:relative;min-height:100%}
+    .botbar{padding:10px 20px}
+    body{overflow:auto}
   }
   @media(prefers-reduced-motion:reduce){
-    *{scroll-behavior:auto!important}
-    .fade{transition:none;opacity:1;transform:none}
-    .btn,.card{transition:none}
+    .panel{transition:opacity .2s}
+    .btn{transition:none}
   }
 </style>
 </head>
-<body id="top">
+<body>
 
-<!-- UTILITY BAR -->
-<div class="ubar">
-  <div class="wrap ubar-inner">
-    <span><span class="dot">●</span>&nbsp; Now booking same-week cleans across Los Angeles &amp; surrounding areas</span>
-    <a href="tel:+15550182394">Call (555) 018-2394</a>
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="32" height="32" rx="6" fill="none" stroke="#CBA85B" stroke-width="1.4"/>
+      <path d="M9 21c2.6-1.9 5.2-1.9 8 0s5.4 1.9 8 0" stroke="#CBA85B" stroke-width="2" stroke-linecap="round"/>
+      <path d="M23 8l1.3 2.9L27 12l-2.7 1.1L23 16l-1.3-2.9L19 12l2.7-1.1L23 8Z" fill="#CBA85B"/>
+    </svg>
+    <span class="name">Bright<b>Nest</b></span>
   </div>
-</div>
-
-<!-- NAV -->
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a class="logo" href="#top">
-      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <rect x="1" y="1" width="30" height="30" rx="7" fill="#E6F7F0"/>
-        <path d="M8 20c2.5-1.8 5-1.8 8 0s5.5 1.8 8 0" stroke="#04B07B" stroke-width="2.3" stroke-linecap="round"/>
-        <path d="M22 7l1.3 2.9L26 11l-2.7 1.1L22 15l-1.3-2.9L18 11l2.7-1.1L22 7Z" fill="#0B1220"/>
-      </svg>
-      BrightNest
-    </a>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#standard">Why us</a>
-      <a href="#quote">Contact</a>
-    </nav>
-    <a class="btn btn-primary" href="#quote">Get a free quote</a>
-  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" role="tab" data-target="home">Home</button>
+    <button class="tab" role="tab" data-target="services">Services</button>
+    <button class="tab" role="tab" data-target="process">How it works</button>
+    <button class="tab" role="tab" data-target="why">Why us</button>
+    <button class="tab" role="tab" data-target="contact">Contact</button>
+  </nav>
+  <button class="btn btn-primary" data-target="contact">Get a free quote</button>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="fade">
-      <span class="eyebrow">Home &amp; office cleaning · Los Angeles</span>
-      <h1>A cleaner space, <span>handled properly.</span></h1>
-      <p class="lead">BrightNest pairs you with vetted, background-checked cleaners and plant-based products — booked in minutes and backed by a spotless-guarantee.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="#quote">Get a free quote</a>
-        <a class="btn btn-outline btn-lg" href="#process">See how it works</a>
-      </div>
-      <div class="hero-micro">
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4Z" stroke="#04B07B" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#04B07B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Insured &amp; bonded</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#04B07B" stroke-width="2"/><path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" stroke="#04B07B" stroke-width="2" stroke-linecap="round"/></svg>Background-checked</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11Z" stroke="#04B07B" stroke-width="2" stroke-linejoin="round"/></svg>Plant-based products</span>
+<!-- STAGE -->
+<main class="stage">
+
+  <!-- HOME -->
+  <section class="panel active" id="home" role="tabpanel">
+    <div class="inner home">
+      <svg class="emblem" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+        <circle cx="27" cy="27" r="25" stroke="#CBA85B" stroke-width="1.2" opacity=".5"/>
+        <path d="M14 33c4-3 8-3 13 0s9 3 13 0" stroke="#CBA85B" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M37 13l1.8 4 4 1.8-4 1.8L37 25l-1.8-4-4-1.8 4-1.8L37 13Z" fill="#CBA85B"/>
+      </svg>
+      <span class="eyebrow">Los Angeles · Home &amp; Office Cleaning</span>
+      <h1>A spotless home,<br><em>handled with care.</em></h1>
+      <p>Premium cleaning for Los Angeles homes and offices — vetted, insured professionals, plant-based products, and a guarantee that every visit is done right.</p>
+      <div class="actions">
+        <button class="btn btn-primary" data-target="contact">Get a free quote</button>
+        <button class="btn btn-ghost" data-target="services">Explore services</button>
       </div>
     </div>
+  </section>
 
-    <!-- HERO VISUAL -->
-    <div class="fade">
-      <div class="hero-visual">
-        <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEF4F1"/></linearGradient>
-            <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6F7F0" stop-opacity=".95"/><stop offset="1" stop-color="#E6F7F0" stop-opacity="0"/></linearGradient>
-          </defs>
-          <rect width="600" height="450" fill="url(#sun)"/>
-          <rect y="300" width="600" height="150" fill="#E2E8EC"/>
-          <rect y="300" width="600" height="6" fill="#cfd8de"/>
-          <rect x="60" y="60" width="150" height="150" rx="4" fill="#BFE0EC" stroke="#9ec4d2" stroke-width="4"/>
-          <line x1="135" y1="60" x2="135" y2="210" stroke="#fff" stroke-width="4"/>
-          <line x1="60" y1="135" x2="210" y2="135" stroke="#fff" stroke-width="4"/>
-          <polygon points="70,210 210,210 300,330 130,330" fill="url(#beam)"/>
-          <rect x="360" y="80" width="80" height="62" rx="2" fill="#F4F8F6" stroke="#04B07B" stroke-width="3"/>
-          <path d="M372 122l16-22 14 16 8-10 14 16" stroke="#04B07B" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <rect x="500" y="232" width="40" height="50" rx="3" fill="#0B1220"/>
-          <path d="M520 232c-16-12-24-4-26 12M520 232c16-10 26-2 26 14M520 232c-2-18 0-26 0-26M520 232c6-14 14-18 14-18" stroke="#04B07B" stroke-width="5" stroke-linecap="round" fill="none"/>
-          <rect x="120" y="250" width="240" height="90" rx="10" fill="#16324A"/>
-          <rect x="120" y="232" width="70" height="60" rx="9" fill="#1E4159"/>
-          <rect x="290" y="232" width="70" height="60" rx="9" fill="#1E4159"/>
-          <rect x="150" y="244" width="56" height="42" rx="7" fill="#04B07B"/>
-          <rect x="278" y="244" width="56" height="42" rx="7" fill="#EAF0F4"/>
-          <ellipse cx="300" cy="380" rx="150" ry="26" fill="#EBF1F5"/>
-          <ellipse cx="300" cy="380" rx="120" ry="18" fill="none" stroke="#04B07B" stroke-width="2.5" opacity=".4"/>
-          <g fill="#fff"><path d="M250 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z"/><path d="M440 200l2.4 5.6 5.6 2.4-5.6 2.4L440 218l-2.4-5.6-5.6-2.4 5.6-2.4 2.4-5.6Z"/></g>
-          <g fill="#04B07B"><path d="M180 175l2 4.6 4.6 2-4.6 2-2 4.6-2-4.6-4.6-2 4.6-2 2-4.6Z"/><path d="M470 110l1.8 4 4 1.8-4 1.8-1.8 4-1.8-4-4-1.8 4-1.8 1.8-4Z"/></g>
-        </svg>
-        <div class="badge">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
-          Serving Los Angeles &amp; nearby
+  <!-- SERVICES -->
+  <section class="panel" id="services" role="tabpanel">
+    <div class="inner">
+      <div class="phead">
+        <span class="eyebrow">Services</span>
+        <h2>Cleaning that fits how you live.</h2>
+      </div>
+      <div class="grid3">
+        <div class="gcard">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20h16M6 20V9l6-5 6 5v11" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 20v-5h4v5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3>Regular cleaning</h3>
+          <p>Weekly, biweekly, or monthly upkeep — kitchens, baths, floors, and dusting throughout.</p>
+        </div>
+        <div class="gcard">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 7c-3 0-5 2-5 6v8h10v-8c0-4-2-6-5-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 14h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Deep cleaning</h3>
+          <p>A top-to-bottom reset — baseboards, grout, inside the oven, and behind appliances.</p>
+        </div>
+        <div class="gcard">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="9" width="16" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 9V6a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3>Move in / move out</h3>
+          <p>An empty-home deep clean that gets every corner inspection-ready for your deposit.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TRUST BAND -->
-<div class="trust">
-  <div class="wrap trust-inner">
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fully insured &amp; bonded</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Background-checked team</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Plant-based &amp; pet-safe</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>100% re-clean guarantee</div>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head fade">
-      <span class="eyebrow">Services</span>
-      <h2>Cleaning that fits how you live.</h2>
-      <p>Every visit is handled by the same small, trusted team — so they learn your space and keep it exactly how you like it.</p>
-    </div>
-    <div class="cards">
-      <article class="card fade">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20h16M6 20V9l6-5 6 5v11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20v-5h4v5" stroke="currentColor" stroke-width="2"/></svg></div>
-        <h3>Regular cleaning</h3>
-        <p>Weekly, biweekly, or monthly upkeep that keeps your home consistently fresh and tidy.</p>
-        <div class="incl"><b>Includes</b> — kitchens, bathrooms, floors, surfaces, and dusting throughout.</div>
-      </article>
-      <article class="card fade">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 7c-3 0-5 2-5 6v8h10v-8c0-4-2-6-5-6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <h3>Deep cleaning</h3>
-        <p>A thorough top-to-bottom reset for the spots that routine cleans don't reach.</p>
-        <div class="incl"><b>Includes</b> — baseboards, grout, inside the oven, and behind appliances.</div>
-      </article>
-      <article class="card fade">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="9" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 9V6a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg></div>
-        <h3>Move in / move out</h3>
-        <p>An empty-home deep clean that gets every corner inspection-ready.</p>
-        <div class="incl"><b>Includes</b> — cabinets, appliances, fixtures, and full-property detailing.</div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="wrap">
-    <div class="sec-head fade">
-      <span class="eyebrow">How it works</span>
-      <h2>From request to spotless in three steps.</h2>
-    </div>
-    <div class="steps">
-      <div class="step fade">
-        <span class="n">STEP 01</span>
-        <h3>Request a quote</h3>
-        <p>Tell us your space and what needs attention. We reply with a clear, flat price — no hourly meters, no surprises.</p>
+  <!-- PROCESS -->
+  <section class="panel" id="process" role="tabpanel">
+    <div class="inner">
+      <div class="phead">
+        <span class="eyebrow">How it works</span>
+        <h2>From request to spotless in three steps.</h2>
       </div>
-      <div class="step fade">
-        <span class="n">STEP 02</span>
-        <h3>Pick your time</h3>
-        <p>Choose a date and window that fits your week. Reschedule free up to 24 hours before the visit.</p>
-      </div>
-      <div class="step fade">
-        <span class="n">STEP 03</span>
-        <h3>Come home to clean</h3>
-        <p>Your BrightNest team handles the rest. Miss a spot? We return and re-clean it within 48 hours.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STANDARD / WHY US -->
-<section class="standard" id="standard">
-  <div class="wrap">
-    <div class="fade">
-      <span class="eyebrow">The BrightNest standard</span>
-      <h2>Held to a higher standard.</h2>
-      <p class="sub">We built BrightNest around the things people quietly worry about when they let someone into their home.</p>
-    </div>
-    <ul class="promise fade">
-      <li>
-        <span class="pchk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div><h4>People you can trust</h4><p>Every cleaner is background-checked, trained, and fully insured before a single visit.</p></div>
-      </li>
-      <li>
-        <span class="pchk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div><h4>Safe for your whole household</h4><p>Plant-based, low-odor products that are gentle on kids, pets, and surfaces.</p></div>
-      </li>
-      <li>
-        <span class="pchk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div><h4>Backed by a guarantee</h4><p>If anything isn't right, we come back and make it right — no charge, no debate.</p></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- QUOTE / CONTACT -->
-<section id="quote">
-  <div class="wrap quote-grid">
-    <div class="quote-side fade">
-      <span class="eyebrow">Get a quote</span>
-      <h2>Request your free quote.</h2>
-      <p>Tell us about your space and we'll reply with a clear, flat price — usually within one business day. Serving Los Angeles and the surrounding areas.</p>
-      <div class="quote-contact">
-        <a href="mailto:hello@brightnestcleanservices.com"><span class="qc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>hello@brightnestcleanservices.com</a>
-        <a href="tel:+15550182394"><span class="qc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-3 2c1 2 3 4 5 5l2-3 5 2v4c0 1-1 2-2 2C10 27 2 19 2 9c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>(555) 018-2394</a>
-      </div>
-    </div>
-
-    <form class="quote fade" id="quoteForm">
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      <div class="steps">
+        <div class="pstep">
+          <div class="num">01</div>
+          <h3>Request a quote</h3>
+          <p>Tell us your space and what needs attention. We reply with a clear, flat price.</p>
+          <div class="bar"></div>
         </div>
-        <div class="field">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" placeholder="(555) 000-0000">
+        <div class="pstep">
+          <div class="num">02</div>
+          <h3>Pick your time</h3>
+          <p>Choose a date and window that fits your week. Reschedule free up to 24 hours before.</p>
+          <div class="bar"></div>
+        </div>
+        <div class="pstep">
+          <div class="num">03</div>
+          <h3>Come home to clean</h3>
+          <p>We handle the rest. Miss a spot? We return and re-clean it within 48 hours.</p>
+          <div class="bar"></div>
         </div>
       </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="size">Property size</label>
-          <select id="size" name="size">
-            <option>Studio / 1 bedroom</option>
-            <option>2–3 bedroom home</option>
-            <option>4+ bedroom home</option>
-            <option>Office / commercial</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="service">Service</label>
-          <select id="service" name="service">
-            <option>Regular cleaning</option>
-            <option>Deep cleaning</option>
-            <option>Move in / move out</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label for="notes">Anything we should know?</label>
-        <textarea id="notes" name="notes" placeholder="Neighborhood, pets, problem areas, preferred days…"></textarea>
-      </div>
-      <button class="btn btn-primary btn-lg" type="submit">Send request</button>
-      <p class="form-note">Opens a pre-filled email to our team — no account needed.</p>
-    </form>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="logo" href="#top">
-          <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <rect x="1" y="1" width="30" height="30" rx="7" fill="#E6F7F0"/>
-            <path d="M8 20c2.5-1.8 5-1.8 8 0s5.5 1.8 8 0" stroke="#04B07B" stroke-width="2.3" stroke-linecap="round"/>
-            <path d="M22 7l1.3 2.9L26 11l-2.7 1.1L22 15l-1.3-2.9L18 11l2.7-1.1L22 7Z" fill="#0B1220"/>
-          </svg>
-          BrightNest
-        </a>
-        <p class="blurb">Professional home and office cleaning serving Los Angeles and the surrounding areas — with vetted people and products that are kind to your household and the planet.</p>
+  <!-- WHY US -->
+  <section class="panel" id="why" role="tabpanel">
+    <div class="inner">
+      <div class="phead">
+        <span class="eyebrow">The BrightNest standard</span>
+        <h2>Held to a higher standard.</h2>
       </div>
-      <div class="foot-col">
-        <h4>Company</h4>
-        <a href="#services">Services</a>
-        <a href="#process">How it works</a>
-        <a href="#standard">Why us</a>
-        <a href="#quote">Get a quote</a>
-      </div>
-      <div class="foot-col">
-        <h4>Contact</h4>
-        <a href="mailto:hello@brightnestcleanservices.com">hello@brightnestcleanservices.com</a>
-        <a href="tel:+15550182394">(555) 018-2394</a>
-        <a href="#quote">Book a clean</a>
+      <div class="why">
+        <div class="item">
+          <div class="pchk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4Z" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>People you can trust</h3>
+          <p>Every cleaner is background-checked, trained, and fully insured before a single visit.</p>
+        </div>
+        <div class="item">
+          <div class="pchk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 4 6 7 6 11a6 6 0 1 1-12 0c0-4 2-7 6-11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Safe for your household</h3>
+          <p>Plant-based, low-odor products that are gentle on kids, pets, and your surfaces.</p>
+        </div>
+        <div class="item">
+          <div class="pchk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Backed by a guarantee</h3>
+          <p>If anything isn't right, we come back and make it right — no charge, no debate.</p>
+        </div>
       </div>
     </div>
-    <div class="foot-base">
-      <span>© 2026 BrightNest Clean Services · brightnestcleanservices.com</span>
-      <span>Licensed, bonded &amp; insured · Serving Greater Los Angeles</span>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="panel" id="contact" role="tabpanel">
+    <div class="inner">
+      <div class="contact-grid">
+        <div class="contact-side">
+          <span class="eyebrow">Get a quote</span>
+          <h2>Let's make it shine.</h2>
+          <p>Tell us about your space and we'll reply with a flat price — usually within one business day. Serving Los Angeles &amp; surrounding areas.</p>
+          <div class="cinfo">
+            <a href="mailto:hello@brightnestcleanservices.com"><span class="ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>hello@brightnestcleanservices.com</a>
+            <a href="tel:+15550182394"><span class="ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-3 2c1 2 3 4 5 5l2-3 5 2v4c0 1-1 2-2 2C10 27 2 19 2 9c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>(555) 018-2394</a>
+          </div>
+        </div>
+        <form class="q" id="quoteForm">
+          <div class="frow">
+            <div class="f"><label for="name">Name</label><input id="name" type="text" placeholder="Your name" required></div>
+            <div class="f"><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com" required></div>
+          </div>
+          <div class="frow">
+            <div class="f"><label for="size">Property size</label>
+              <select id="size"><option>Studio / 1 bedroom</option><option>2–3 bedroom home</option><option>4+ bedroom home</option><option>Office / commercial</option></select>
+            </div>
+            <div class="f"><label for="service">Service</label>
+              <select id="service"><option>Regular cleaning</option><option>Deep cleaning</option><option>Move in / move out</option><option>Not sure yet</option></select>
+            </div>
+          </div>
+          <div class="f"><label for="notes">Notes</label><textarea id="notes" placeholder="Neighborhood, pets, problem areas, preferred days…"></textarea></div>
+          <button class="btn btn-primary" type="submit">Send request</button>
+        </form>
+      </div>
     </div>
-  </div>
+  </section>
+
+</main>
+
+<!-- BOTTOM BAR -->
+<footer class="botbar">
+  <span>© 2026 BrightNest Clean Services · <span class="gold">Serving Greater Los Angeles</span></span>
+  <span>Licensed · Bonded · Insured</span>
 </footer>
 
 <script>
-  const nav = document.getElementById('nav');
-  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8));
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  function show(target){
+    panels.forEach(p => p.classList.toggle('active', p.id === target));
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.target === target));
+  }
+  // any element with data-target switches panels (tabs + buttons)
+  document.querySelectorAll('[data-target]').forEach(el=>{
+    el.addEventListener('click', () => show(el.dataset.target));
+  });
 
   // quote form -> pre-filled email
   document.getElementById('quoteForm').addEventListener('submit', function(e){
     e.preventDefault();
     const v = id => document.getElementById(id).value.trim();
     const subject = `Quote request — ${v('service')} (${v('size')})`;
-    const body =
-`Name: ${v('name')}
-Email: ${v('email')}
-Phone: ${v('phone')}
-Property size: ${v('size')}
-Service: ${v('service')}
-
-Notes:
-${v('notes')}`;
+    const body = `Name: ${v('name')}\nEmail: ${v('email')}\nProperty size: ${v('size')}\nService: ${v('service')}\n\nNotes:\n${v('notes')}`;
     window.location.href = `mailto:hello@brightnestcleanservices.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
-
-  // scroll reveal
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
-  }, {threshold:.12});
-  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
